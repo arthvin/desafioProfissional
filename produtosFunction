@@ -1,0 +1,29 @@
+const produtos = [
+    {nome: "Caneta"    , qtde: 20, valor: 2.50},
+    {nome: "Caderno"   , qtde: 20, valor: 2.50},
+    {nome: "Tesoura"   , qtde: 20, valor: 2.50},
+    {nome: "Estojo"    , qtde: 20, valor: 2.50},
+    {nome: "Lapis"     , qtde: 20, valor: 2.50},
+    {nome: "Celular"   , qtde: 20, valor: 2.50},
+    {nome: "Computador", qtde: 20, valor: 2.50},
+    {nome: "Mochila"   , qtde: 20, valor: 2.50},
+    {nome: "Janela"    , qtde: 20, valor: 2.50},
+    {nome: "Relogio"   , qtde: 20, valor: 2.50},
+ ]
+
+function getRadonValuesFromArray(array, randonQuantidy){
+    if( randonQuantidy > array.length) return "Deu Ruim"
+
+    let randromProducts = []
+
+    while(randromProducts.length < randonQuantidy){
+        let randomNumber = Math.floor(Math.random() * array.length) 
+        
+        if(!randromProducts.includes(array[randomNumber])){
+            randromProducts.push(array[randomNumber])
+        }
+    }
+    return randromProducts
+}
+
+    console.log(getRadonValuesFromArray(produtos, 5))
