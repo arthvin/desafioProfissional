@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import usuarioController from './src/usuario/usuario.controller'
+import usuarioController from './src/usuario/usuario/usuario.controller'
 
 const routes = Router()
 routes.get('/health-check')
